@@ -1,25 +1,13 @@
-import { useQRCode } from 'next-qrcode';
+import {QRCodeCanvas} from 'qrcode.react';
 
-export default function GenerateQRCode({url}) {
-    const { Image } = useQRCode();
-
+export default function GenerateQRCode({ url }) {
     return (
-        <Image
-          text={url}
-          alt={'qr-code'}
-          options={{
-            type: 'image/jpeg',
-            quality: 0.3,
-            level: 'M',
-            margin: 3,
-            scale: 4,
-            width: 200,
-            color: {
-              dark: '#010599FF',
-              light: '#FFBF60FF',
-            },
-          }}
+    <QRCodeCanvas
+      id="qr-gen"
+      value={url}
+      size={290}
+      level={"H"}
+      includeMargin={true}
     />
     )
-
 }
