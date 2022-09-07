@@ -1,3 +1,4 @@
-{
-  "parser": "react-scripts/node_modules/babel-eslint"
-}
+// {
+//   "parser": "react-scripts/node_modules/babel-eslint"
+// }
+{}
