@@ -3,8 +3,8 @@ import Head from "next/head";
 import Image from 'next/image';
 import styles from "../styles/Home.module.css";
 import logo from './logo.png';
-import GenerateQRCode from "./components/generateQRCode";
-import {downloadQRCode} from "./components/downloadQRCode";
+import GenerateQRCode from "../components/generateQRCode";
+import {downloadQRCode} from "../components/downloadQRCode";
 
 export default function Home() {
   const [url, setUrl] = useState("");
