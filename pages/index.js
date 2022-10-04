@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styles from "../styles/Home.module.css";
 import logo from './logo.png';
 import GenerateQRCode from "../components/generateQRCode";
-import {downloadQRCode} from "../components/downloadQRCode";
+import { downloadQRCode } from "../components/downloadQRCode";
 
 export default function Home() {
   const [url, setUrl] = useState("");
@@ -33,7 +33,7 @@ export default function Home() {
       </Head>
       <main>
         <div className="flex flex-col align-center justify-center m-auto mb-4 md:max-w-5xl p-10 md:flex-row">
-          <div className="w-full md:w-1/2 mr-24">
+          <div className="w-full md:w-1/2 mr-24 mb-12">
             {/* <div className="flex"> */}
             <Image src={logo} width={50} height={50} />
             <h1 className="text-3xl font-bold mb-5 md:text-4xl">
@@ -69,6 +69,7 @@ export default function Home() {
                   </div>
                   <GenerateQRCode
                     className="m-auto pb-4"
+                    
                     url={completeUrl}
                     bgColor={bgColor}
                     fgColor={fgColor}
